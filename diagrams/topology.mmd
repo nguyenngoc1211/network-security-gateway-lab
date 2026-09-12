@@ -1,0 +1,9 @@
+flowchart TB
+  Internet --> Uplink[Docker/WSL uplink]
+  Uplink --> Gateway[Security Gateway]
+  Attacker -->|WAN| Gateway
+  Remote -->|WireGuard VPN| Gateway
+  Gateway -->|LAN| Client
+  Gateway -->|DMZ| Proxy[Nginx Reverse Proxy]
+  Proxy --> WEB01
+  Proxy --> WEB02

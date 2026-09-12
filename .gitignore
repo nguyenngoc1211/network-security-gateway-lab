@@ -1,0 +1,14 @@
+run/
+gateway/wireguard/*.key
+gateway/wireguard/*.conf
+logs/*
+!logs/sanitized/
+!logs/sanitized/.gitkeep
+!logs/sanitized/**
+*.pcap
+.env
+secrets/
+__pycache__/
+*.pyc
+run-all.log
+run-all.*
